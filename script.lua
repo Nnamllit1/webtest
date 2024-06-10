@@ -1,6 +1,6 @@
 local button = get(".button")
-local outputText = get("outputText")
+local result = get("result")
 
 button.on_click(function()
-  outputText.set_content("Button Clicked!")
+  result.set_content("Test")
 end)
