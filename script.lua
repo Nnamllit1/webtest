@@ -1,6 +1,6 @@
 local button = get("button1")
 local result = get("result")
-local press = 0
+local press = 1
 
 button.on_click(function()
   result.set_content(press)
