@@ -16,6 +16,7 @@ end)
 
 button.on_click(function()
   result.set_content(press)
+  local websocket = require'websocket'
 
   if log_bool and os.time() - last_webhook_time >= 10 then
     -- Send data to Discord Webhook
