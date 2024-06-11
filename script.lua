@@ -1,5 +1,6 @@
 local button = get("button1")
 local result = get("result")
+local log = get("log")
 local press = 1
 local last_webhook_time = os.time() - 10 -- Initialisiert die Zeitvariable so, dass der Webhook beim Start sofort gesendet wird
 
